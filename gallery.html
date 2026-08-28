@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gallery – Nova Lite Solution</title>
+  <meta name="description" content="Browse Nova Lite Solution's product and installation gallery." />
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+</head>
+<body>
+<header class="header" id="header">
+  <nav class="navbar container">
+    <a href="index.html" class="logo"><span>Nova Lite <span class="accent">Solution</span></span></a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="gallery.html" class="active">Gallery</a></li>
+      <li><a href="dealer.html">Dealer/Distributor</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+  </nav>
+</header>
+
+<section class="page-hero">
+  <div class="container">
+    <h1>Our <span class="accent">Gallery</span></h1>
+    <p>A glimpse of our products and installations.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="filter-bar">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="products">Products</button>
+      <button class="filter-btn" data-filter="installations">Installations</button>
+    </div>
+    <div class="gallery-grid" id="galleryGrid">
+      <div class="gallery-item" data-cat="products"><img src="assets/images/led-bulb.jpg" alt="LED Bulb" onerror="this.src='assets/images/placeholder.jpg'" /><div class="gallery-overlay"><span>LED Bulb</span></div></div>
+      <div class="gallery-item" data-cat="products"><img src="assets/images/rechargeable-bulb.jpg" alt="Rechargeable Bulb" onerror="this.src='assets/images/placeholder.jpg'" /><div class="gallery-overlay"><span>Rechargeable Bulb</span></div></div>
+      <div class="gallery-item" data-cat="products"><img src="assets/images/tube-light.jpg" alt="Tube Light" onerror="this.src='assets/images/placeholder.jpg'" /><div class="gallery-overlay"><span>Tube Light</span></div></div>
+      <div class="gallery-item" data-cat="installations"><img src="assets/images/install1.jpg" alt="Installation" onerror="this.src='assets/images/placeholder.jpg'" /><div class="gallery-overlay"><span>Shop Installation</span></div></div>
+      <div class="gallery-item" data-cat="installations"><img src="assets/images/install2.jpg" alt="Installation" onerror="this.src='assets/images/placeholder.jpg'" /><div class="gallery-overlay"><span>Home Setup</span></div></div>
+      <div class="gallery-item" data-cat="products"><img src="assets/images/led-bulb-12w.jpg" alt="LED Bulb 12W" onerror="this.src='assets/images/placeholder.jpg'" /><div class="gallery-overlay"><span>LED Bulb 12W</span></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" onclick="closeLightbox()"><i class="fas fa-times"></i></button>
+  <img id="lightboxImg" src="" alt="" />
+</div>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div class="footer-brand"><h3>Nova Lite <span class="accent">Solution</span></h3><p>Premium LED lighting from Kishanganj, Bihar.</p>
+      <div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="https://wa.me/919142651626"><i class="fab fa-whatsapp"></i></a></div>
+    </div>
+    <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+    <div class="footer-contact"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i> Kishanganj, Bihar</p><p><i class="fas fa-phone"></i> <a href="tel:+919142651626">+91 9142651626</a></p></div>
+  </div>
+  <div class="footer-bottom"><p>&copy; 2026 Nova Lite Solution. All rights reserved.</p></div>
+</footer>
+<a href="https://wa.me/919142651626" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i><span>Order Now</span></a>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
