@@ -3,80 +3,92 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About Us – Nova Lite Solution</title>
-  <meta name="description" content="Learn about Nova Lite Solution, a premium LED lighting brand based in Kishanganj, Bihar." />
+  <title>About Us – NOVALITE Solution</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
+
 <header class="header" id="header">
   <nav class="navbar container">
-    <a href="index.html" class="logo"><span>Nova Lite <span class="accent">Solution</span></span></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html" class="active">About Us</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="dealer.html">Dealer/Distributor</a></li>
-      <li><a href="contact.html">Contact</a></li>
+    <a href="index.html" class="logo-wrap">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="14" stroke="#de6e4b" stroke-width="2"/>
+        <path d="M16 8V20M12 14L16 10L20 14M11 24H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-logo-text">NOVALITE</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="nav-link">Discover</a></li>
+      <li><a href="products.html" class="nav-link">Product</a></li>
+      <li><a href="gallery.html" class="nav-link">Portfolio</a></li>
+      <li><a href="about.html" class="nav-link active">About Us</a></li>
+      <li><a href="dealer.html" class="nav-link">Distributor</a></li>
     </ul>
-    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <div style="display:flex; align-items:center; gap:16px;">
+      <a href="contact.html" class="btn-pill" style="padding:9px 22px; font-size:0.86rem;">Contact</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
   </nav>
 </header>
 
-<section class="page-hero">
+<section class="inner-hero">
   <div class="container">
-    <h1>About <span class="accent">Nova Lite Solution</span></h1>
-    <p>Our story, mission, and commitment to quality lighting.</p>
+    <span class="hero-award-tag">✦ Our Heritage</span>
+    <h1>About Nova Lite</h1>
+    <p>Pioneering modern lighting technologies designed and distributed from Kishanganj, Bihar.</p>
   </div>
 </section>
 
-<section class="section">
-  <div class="container about-grid">
-    <div class="about-text">
-      <span class="section-tag">Who We Are</span>
-      <h2>Lighting Up <span class="accent">Bihar & Beyond</span></h2>
-      <p>Nova Lite Solution is a trusted LED lighting brand headquartered in Kishanganj, Bihar. We specialize in manufacturing and distributing energy-efficient LED products designed for homes, offices, shops, and industrial spaces.</p>
-      <p>Our mission is simple: deliver brilliant, durable and affordable lighting solutions to every corner of India. With a growing network of dealers and distributors across Bihar and neighbouring states, Nova Lite Solution is rapidly becoming the go-to brand for quality LED products.</p>
-      <div class="about-values">
-        <div class="value-item"><i class="fas fa-eye"></i><div><h4>Our Vision</h4><p>To be the most trusted lighting brand in Eastern India.</p></div></div>
-        <div class="value-item"><i class="fas fa-bullseye"></i><div><h4>Our Mission</h4><p>Affordable, energy-efficient lighting for every household.</p></div></div>
-        <div class="value-item"><i class="fas fa-heart"></i><div><h4>Our Values</h4><p>Quality, integrity, innovation and customer satisfaction.</p></div></div>
+<section class="split-feature-section" style="background:#fff;">
+  <div class="container feature-split-grid">
+    <div class="feature-arch-wrap">
+      <div class="feature-arch-card">
+        <div class="arch-watermark">NOVA</div>
+        <svg class="lamp-illustration" viewBox="0 0 240 320" fill="none">
+          <line x1="120" y1="0" x2="120" y2="110" stroke="#121316" stroke-width="3" />
+          <path d="M120 110 C 114 140, 60 180, 35 195 L 205 195 C 180 180, 126 140, 120 110 Z" fill="#203a3d" />
+          <ellipse cx="120" cy="195" rx="85" ry="12" fill="#152628" stroke="#de6e4b" stroke-width="2" />
+          <ellipse cx="120" cy="198" rx="60" ry="8" fill="#ffe299" opacity="0.9" />
+        </svg>
       </div>
     </div>
-    <div class="about-img-wrap">
-      <img src="assets/images/about.jpg" alt="Nova Lite Solution Team" onerror="this.src='assets/images/placeholder.jpg'" />
-      <div class="about-badge"><h3>Est.</h3><p>2020</p></div>
+    
+    <div class="feature-content">
+      <span class="hero-award-tag">✦ Our Mission</span>
+      <h2>Brilliance For Every Space</h2>
+      <p>Nova Lite Solution was established to bridge the gap between high-end architectural aesthetics and rugged durability needed in Indian environments. We craft lighting fixtures that not only elevate interior elegance but also withstand voltage fluctuations and power outages seamlessly.</p>
+      
+      <div class="feature-list-clean">
+        <div class="feature-row-item">
+          <div class="feature-plus"><i class="fas fa-check"></i></div>
+          <div>
+            <h4>Rooted in Kishanganj, Bihar</h4>
+            <p>Direct manufacturing &amp; distribution hub serving dealers across Eastern India.</p>
+          </div>
+        </div>
+        <div class="feature-row-item">
+          <div class="feature-plus"><i class="fas fa-check"></i></div>
+          <div>
+            <h4>Emergency Inverter Innovation</h4>
+            <p>Specialized rechargeable LED bulbs that keep homes illuminated during blackouts.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section why-us">
-  <div class="container">
-    <div class="section-header">
-      <h2>Why <span class="accent">Choose Us</span></h2>
-    </div>
-    <div class="why-grid">
-      <div class="why-card"><i class="fas fa-certificate"></i><h4>Certified Products</h4><p>All products comply with BIS/ISI quality standards.</p></div>
-      <div class="why-card"><i class="fas fa-users"></i><h4>Dealer Network</h4><p>50+ active dealers across Bihar and Jharkhand.</p></div>
-      <div class="why-card"><i class="fas fa-recycle"></i><h4>Sustainable</h4><p>Eco-friendly manufacturing with minimal waste.</p></div>
-      <div class="why-card"><i class="fas fa-warehouse"></i><h4>Local Availability</h4><p>Products available at local stores near you.</p></div>
-    </div>
+<footer class="footer-dark">
+  <div class="container footer-bottom-row">
+    <p>&copy; 2026 Nova Lite Solution. Kishanganj, Bihar.</p>
+    <a href="index.html" style="color:var(--terracotta);">← Back to Discover</a>
   </div>
-</section>
-
-<footer class="footer">
-  <div class="container footer-grid">
-    <div class="footer-brand"><h3>Nova Lite <span class="accent">Solution</span></h3><p>Premium LED lighting from Kishanganj, Bihar.</p>
-      <div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="https://wa.me/919142651626"><i class="fab fa-whatsapp"></i></a></div>
-    </div>
-    <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="about.html">About Us</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div class="footer-contact"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i> Kishanganj, Bihar</p><p><i class="fas fa-phone"></i> <a href="tel:+919142651626">+91 9142651626</a></p></div>
-  </div>
-  <div class="footer-bottom"><p>&copy; 2026 Nova Lite Solution. All rights reserved.</p></div>
 </footer>
-<a href="https://wa.me/919142651626" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i><span>Order Now</span></a>
+
+<a href="https://wa.me/919142651626" class="whatsapp-float-btn" target="_blank">
+  <i class="fab fa-whatsapp"></i><span>Order on WhatsApp</span>
+</a>
 <script src="assets/js/main.js"></script>
 </body>
 </html>

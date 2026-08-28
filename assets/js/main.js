@@ -1,99 +1,70 @@
-// ===== NOVA LITE SOLUTION – MAIN JS =====
+// ===== NOVA LITE SOLUTION – JS INTERACTIVITY =====
 
-// Navbar scroll effect
+// Navbar background change on scroll
 window.addEventListener('scroll', () => {
   const header = document.getElementById('header');
   if (header) {
-    header.classList.toggle('scrolled', window.scrollY > 50);
+    if (window.scrollY > 40) {
+      header.style.background = 'rgba(18, 19, 22, 0.96)';
+    } else {
+      header.style.background = 'rgba(18, 19, 22, 0.85)';
+    }
   }
 });
 
-// Mobile hamburger
+// Hamburger mobile menu toggle
 const hamburger = document.getElementById('hamburger');
-const navLinks = document.getElementById('navLinks');
-if (hamburger && navLinks) {
+const navMenu = document.getElementById('navMenu');
+if (hamburger && navMenu) {
   hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('open');
-    hamburger.classList.toggle('open');
-  });
-  // Close menu when link clicked
-  navLinks.querySelectorAll('a').forEach(a => {
-    a.addEventListener('click', () => {
-      navLinks.classList.remove('open');
-      hamburger.classList.remove('open');
-    });
+    navMenu.classList.toggle('open');
   });
 }
 
-// Product / Gallery filter
-function initFilter(gridId) {
-  const filterBtns = document.querySelectorAll('.filter-btn');
-  const grid = document.getElementById(gridId);
-  if (!filterBtns.length || !grid) return;
-  filterBtns.forEach(btn => {
-    btn.addEventListener('click', () => {
-      filterBtns.forEach(b => b.classList.remove('active'));
-      btn.classList.add('active');
-      const filter = btn.dataset.filter;
-      const items = grid.querySelectorAll('[data-category], [data-cat]');
-      items.forEach(item => {
-        const cat = item.dataset.category || item.dataset.cat;
-        if (filter === 'all' || cat === filter || cat === 'all') {
-          item.style.display = '';
+// Product filter pills
+const filterPills = document.querySelectorAll('.filter-pill');
+const productCards = document.querySelectorAll('.arch-prod-card[data-category]');
+
+if (filterPills.length && productCards.length) {
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => p.classList.remove('active'));
+      pill.classList.add('active');
+      const filter = pill.dataset.filter;
+
+      productCards.forEach(card => {
+        const cat = card.dataset.category;
+        if (filter === 'all' || cat === filter) {
+          card.style.display = '';
         } else {
-          item.style.display = 'none';
+          card.style.display = 'none';
         }
       });
     });
   });
 }
-initFilter('productsGrid');
-initFilter('galleryGrid');
 
-// Gallery lightbox
-const galleryItems = document.querySelectorAll('.gallery-item');
-const lightbox = document.getElementById('lightbox');
-const lightboxImg = document.getElementById('lightboxImg');
-galleryItems.forEach(item => {
-  item.addEventListener('click', () => {
-    const img = item.querySelector('img');
-    if (img && lightbox && lightboxImg) {
-      lightboxImg.src = img.src;
-      lightboxImg.alt = img.alt;
-      lightbox.classList.add('active');
-      document.body.style.overflow = 'hidden';
-    }
-  });
-});
-function closeLightbox() {
-  if (lightbox) {
-    lightbox.classList.remove('active');
-    document.body.style.overflow = '';
-  }
+// Form Handlers routing to WhatsApp (+91 9142651626)
+function handleQuickEnquiry(e) {
+  e.preventDefault();
+  const phone = document.getElementById('quickPhone').value;
+  const text = `Hello Nova Lite Solution! I want to get started. My phone number is ${phone}.`;
+  window.open(`https://wa.me/919142651626?text=${encodeURIComponent(text)}`, '_blank');
 }
-if (lightbox) {
-  lightbox.addEventListener('click', (e) => {
-    if (e.target === lightbox) closeLightbox();
-  });
-}
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape') closeLightbox();
-});
 
-// Form handlers – redirect to WhatsApp on submit
-function handleEnquiry(e) {
+function handleGeneralEnquiry(e) {
   e.preventDefault();
   const form = e.target;
   const name = form.name.value;
   const phone = form.phone.value;
   const product = form.product.value;
-  const message = form.message.value;
-  const text = `Hello Nova Lite Solution!%0AName: ${name}%0APhone: ${phone}%0AProduct: ${product}%0AMessage: ${message}`;
-  window.open(`https://wa.me/919142651626?text=${text}`, '_blank');
+  const msg = form.message.value;
+  const text = `Hello Nova Lite Solution!\nName: ${name}\nPhone: ${phone}\nProduct: ${product}\nMessage: ${msg}`;
+  window.open(`https://wa.me/919142651626?text=${encodeURIComponent(text)}`, '_blank');
   form.reset();
-  showAlert('Enquiry sent! Redirecting to WhatsApp...');
 }
-function handleDealer(e) {
+
+function handleDealerSubmit(e) {
   e.preventDefault();
   const form = e.target;
   const name = form.name.value;
@@ -101,50 +72,20 @@ function handleDealer(e) {
   const phone = form.phone.value;
   const city = form.city.value;
   const type = form.type.value;
-  const text = `Hello! I want to register as a ${type}.%0AName: ${name}%0ABusiness: ${business}%0APhone: ${phone}%0ACity: ${city}`;
-  window.open(`https://wa.me/919142651626?text=${text}`, '_blank');
+  const volume = form.volume.value;
+  const text = `Hello Nova Lite Solution!\n*Dealer Registration Request*\nName: ${name}\nBusiness: ${business}\nPhone: ${phone}\nCity: ${city}\nType: ${type}\nVolume: ${volume}`;
+  window.open(`https://wa.me/919142651626?text=${encodeURIComponent(text)}`, '_blank');
   form.reset();
-  showAlert('Registration submitted! Redirecting to WhatsApp...');
 }
-function handleContact(e) {
+
+function handleContactSubmit(e) {
   e.preventDefault();
   const form = e.target;
   const name = form.name.value;
   const phone = form.phone.value;
   const subject = form.subject.value;
-  const message = form.message.value;
-  const text = `Hello Nova Lite Solution!%0AName: ${name}%0APhone: ${phone}%0ASubject: ${subject}%0AMessage: ${message}`;
-  window.open(`https://wa.me/919142651626?text=${text}`, '_blank');
+  const msg = form.message.value;
+  const text = `Hello Nova Lite Solution!\n*Contact Message*\nName: ${name}\nPhone: ${phone}\nSubject: ${subject}\nMessage: ${msg}`;
+  window.open(`https://wa.me/919142651626?text=${encodeURIComponent(text)}`, '_blank');
   form.reset();
-  showAlert('Message sent! Redirecting to WhatsApp...');
 }
-function showAlert(msg) {
-  const el = document.createElement('div');
-  el.textContent = msg;
-  Object.assign(el.style, {
-    position: 'fixed', top: '90px', right: '20px', background: '#25D366',
-    color: '#fff', padding: '14px 24px', borderRadius: '10px',
-    fontFamily: 'Poppins, sans-serif', fontWeight: '600', fontSize: '0.9rem',
-    zIndex: '9999', boxShadow: '0 4px 20px rgba(0,0,0,0.2)',
-    animation: 'fadeIn 0.3s ease'
-  });
-  document.body.appendChild(el);
-  setTimeout(() => el.remove(), 3500);
-}
-
-// Scroll reveal animation
-const revealEls = document.querySelectorAll('.product-card, .why-card, .stat-card, .testimonial-card, .gallery-item');
-const revealObserver = new IntersectionObserver((entries) => {
-  entries.forEach(entry => {
-    if (entry.isIntersecting) {
-      entry.target.style.opacity = '1';
-      entry.target.style.transform = 'translateY(0)';
-    }
-  });
-}, { threshold: 0.1 });
-revealEls.forEach(el => {
-  el.style.opacity = '0';
-  el.style.transform = 'translateY(30px)';
-  el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-  revealObserver.observe(el);
-});

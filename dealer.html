@@ -3,94 +3,97 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dealer / Distributor Registration – Nova Lite Solution</title>
-  <meta name="description" content="Register as a dealer or distributor for Nova Lite Solution LED products in Bihar and beyond." />
+  <title>Dealer / Distributor Partnership – NOVALITE</title>
   <link rel="stylesheet" href="assets/css/style.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
 </head>
 <body>
+
 <header class="header" id="header">
   <nav class="navbar container">
-    <a href="index.html" class="logo"><span>Nova Lite <span class="accent">Solution</span></span></a>
-    <ul class="nav-links" id="navLinks">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="dealer.html" class="active">Dealer/Distributor</a></li>
-      <li><a href="contact.html">Contact</a></li>
+    <a href="index.html" class="logo-wrap">
+      <svg width="32" height="32" viewBox="0 0 32 32" fill="none">
+        <circle cx="16" cy="16" r="14" stroke="#de6e4b" stroke-width="2"/>
+        <path d="M16 8V20M12 14L16 10L20 14M11 24H21" stroke="#fff" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span class="brand-logo-text">NOVALITE</span>
+    </a>
+    <ul class="nav-menu" id="navMenu">
+      <li><a href="index.html" class="nav-link">Discover</a></li>
+      <li><a href="products.html" class="nav-link">Product</a></li>
+      <li><a href="gallery.html" class="nav-link">Portfolio</a></li>
+      <li><a href="about.html" class="nav-link">About Us</a></li>
+      <li><a href="dealer.html" class="nav-link active">Distributor</a></li>
     </ul>
-    <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    <div style="display:flex; align-items:center; gap:16px;">
+      <a href="contact.html" class="btn-pill" style="padding:9px 22px; font-size:0.86rem;">Contact</a>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
   </nav>
 </header>
 
-<section class="page-hero">
+<section class="inner-hero">
   <div class="container">
-    <h1>Dealer / Distributor <span class="accent">Registration</span></h1>
-    <p>Join our growing network and grow your business with Nova Lite Solution.</p>
+    <span class="hero-award-tag">✦ Partner With Us</span>
+    <h1>Dealer &amp; Distributor Portal</h1>
+    <p>Join Nova Lite Solution's rapidly expanding dealership network across Bihar, Bengal &amp; Jharkhand.</p>
   </div>
 </section>
 
-<section class="section">
-  <div class="container dealer-layout">
-    <div class="dealer-benefits">
-      <h2>Why Partner with <span class="accent">Nova Lite Solution?</span></h2>
-      <div class="benefit-item"><i class="fas fa-percentage"></i><div><h4>Attractive Margins</h4><p>Earn competitive dealer margins and volume-based bonuses.</p></div></div>
-      <div class="benefit-item"><i class="fas fa-truck"></i><div><h4>Fast Supply</h4><p>Timely delivery from our Kishanganj warehouse.</p></div></div>
-      <div class="benefit-item"><i class="fas fa-ad"></i><div><h4>Marketing Support</h4><p>Branding materials, banners and promotional support provided.</p></div></div>
-      <div class="benefit-item"><i class="fas fa-phone-alt"></i><div><h4>Dedicated Support</h4><p>Dedicated account manager for all dealer queries.</p></div></div>
-      <div class="benefit-item"><i class="fas fa-box"></i><div><h4>Wide Product Range</h4><p>LED Bulbs, Rechargeable Bulbs, Tube Lights and more.</p></div></div>
-    </div>
-    <div class="dealer-form-wrap">
-      <h3>Registration Form</h3>
-      <form class="dealer-form" id="dealerForm" onsubmit="handleDealer(event)">
-        <div class="form-group"><label>Full Name *</label><input type="text" name="name" required placeholder="Your full name" /></div>
-        <div class="form-group"><label>Business Name *</label><input type="text" name="business" required placeholder="Shop / company name" /></div>
-        <div class="form-row">
-          <div class="form-group"><label>Phone *</label><input type="tel" name="phone" required placeholder="+91 XXXXXXXXXX" /></div>
-          <div class="form-group"><label>WhatsApp No.</label><input type="tel" name="whatsapp" placeholder="+91 XXXXXXXXXX" /></div>
-        </div>
-        <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="business@email.com" /></div>
-        <div class="form-row">
-          <div class="form-group"><label>City / District *</label><input type="text" name="city" required placeholder="Your city" /></div>
-          <div class="form-group"><label>State *</label><input type="text" name="state" required placeholder="Bihar" /></div>
-        </div>
-        <div class="form-group"><label>Type *</label>
-          <select name="type" required>
-            <option value="">Select Type</option>
-            <option>Retailer</option>
-            <option>Dealer</option>
-            <option>Distributor</option>
-            <option>Wholesaler</option>
-          </select>
-        </div>
-        <div class="form-group"><label>Products Interested In</label>
-          <div class="checkbox-group">
-            <label><input type="checkbox" name="prod" value="LED Bulb" /> LED Bulbs</label>
-            <label><input type="checkbox" name="prod" value="Rechargeable Bulb" /> Rechargeable Bulbs</label>
-            <label><input type="checkbox" name="prod" value="Tube Light" /> Tube Lights</label>
-            <label><input type="checkbox" name="prod" value="All" /> All Products</label>
+<section class="get-started-section">
+  <div class="container" style="max-width:860px;">
+    <div class="form-shell">
+      <h3>Distributor Application Form</h3>
+      <form onsubmit="handleDealerSubmit(event)">
+        <div class="input-row">
+          <div class="form-field">
+            <label>Full Name *</label>
+            <input type="text" name="name" placeholder="Your Name" required />
+          </div>
+          <div class="form-field">
+            <label>Business / Shop Name *</label>
+            <input type="text" name="business" placeholder="E.g. Poddar Electricals" required />
           </div>
         </div>
-        <div class="form-group"><label>Message / Additional Info</label><textarea name="message" rows="3" placeholder="Any additional details..."></textarea></div>
-        <button type="submit" class="btn btn-primary" style="width:100%"><i class="fas fa-user-plus"></i> Submit Registration</button>
+        <div class="input-row">
+          <div class="form-field">
+            <label>Phone / WhatsApp *</label>
+            <input type="tel" name="phone" placeholder="+91 XXXXXXXXXX" required />
+          </div>
+          <div class="form-field">
+            <label>City &amp; District *</label>
+            <input type="text" name="city" placeholder="Kishanganj / Purnia / Patna" required />
+          </div>
+        </div>
+        <div class="form-field">
+          <label>Partnership Type</label>
+          <select name="type">
+            <option>Retail Stockist</option>
+            <option>Exclusive City Dealer</option>
+            <option>Regional Distributor</option>
+            <option>Wholesale Trader</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label>Estimated Initial Stock Volume</label>
+          <input type="text" name="volume" placeholder="E.g. 500 pcs / 1000 pcs" />
+        </div>
+        <button type="submit" class="btn-pill" style="width:100%; justify-content:center;">Submit Registration</button>
       </form>
     </div>
   </div>
 </section>
 
-<footer class="footer">
-  <div class="container footer-grid">
-    <div class="footer-brand"><h3>Nova Lite <span class="accent">Solution</span></h3><p>Premium LED lighting from Kishanganj, Bihar.</p>
-      <div class="social-links"><a href="#"><i class="fab fa-facebook-f"></i></a><a href="#"><i class="fab fa-instagram"></i></a><a href="https://wa.me/919142651626"><i class="fab fa-whatsapp"></i></a></div>
-    </div>
-    <div class="footer-links"><h4>Quick Links</h4><ul><li><a href="index.html">Home</a></li><li><a href="products.html">Products</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-    <div class="footer-contact"><h4>Contact</h4><p><i class="fas fa-map-marker-alt"></i> Kishanganj, Bihar</p><p><i class="fas fa-phone"></i> <a href="tel:+919142651626">+91 9142651626</a></p></div>
+<footer class="footer-dark">
+  <div class="container footer-bottom-row">
+    <p>&copy; 2026 Nova Lite Solution. Kishanganj, Bihar.</p>
+    <a href="index.html" style="color:var(--terracotta);">← Back to Discover</a>
   </div>
-  <div class="footer-bottom"><p>&copy; 2026 Nova Lite Solution. All rights reserved.</p></div>
 </footer>
-<a href="https://wa.me/919142651626" class="whatsapp-float" target="_blank"><i class="fab fa-whatsapp"></i><span>Order Now</span></a>
+
+<a href="https://wa.me/919142651626" class="whatsapp-float-btn" target="_blank">
+  <i class="fab fa-whatsapp"></i><span>Order on WhatsApp</span>
+</a>
 <script src="assets/js/main.js"></script>
 </body>
 </html>
