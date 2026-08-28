@@ -36,27 +36,27 @@
   </nav>
 </header>
 
-<!-- ===== HERO SPLIT (ANIMATED SULIGHT LAYOUT) ===== -->
+<!-- ===== HERO (CLEAN, NO DIAGONAL CUT) ===== -->
 <section class="hero-split" id="hero">
+
+  <!-- Floating light particles -->
+  <div class="hero-particles" aria-hidden="true">
+    <span></span><span></span><span></span><span></span><span></span><span></span>
+  </div>
+
   <div class="container hero-grid">
-    
-    <!-- LEFT ARCH SHOWCASE WITH ANIMATED HANGING LAMP -->
+
+    <!-- LEFT ARCH SHOWCASE -->
     <div class="arch-showcase">
+      <div class="arch-glow-ring" aria-hidden="true"></div>
       <div class="arch-card">
         <div class="arch-watermark">LIGHT</div>
-        
-        <!-- Animated Architectural SVG Lamp Fixture -->
+
         <svg class="lamp-illustration" viewBox="0 0 240 320" fill="none">
-          <!-- Wire / Rod -->
           <line x1="120" y1="0" x2="120" y2="120" stroke="#121316" stroke-width="3.5" />
           <circle cx="120" cy="122" r="6" fill="#121316" />
-          
-          <!-- Lamp Shade Body -->
           <path d="M120 126 C 114 150, 60 200, 30 216 C 26 218, 30 224, 40 224 L 200 224 C 210 224, 214 218, 210 216 C 180 200, 126 150, 120 126 Z" fill="#203a3d" />
-          <!-- Lamp Rim (Gold/Terracotta Accent) -->
           <ellipse cx="120" cy="224" rx="88" ry="14" fill="#152628" stroke="#de6e4b" stroke-width="2" />
-          
-          <!-- Warm Illumination Glow -->
           <ellipse class="lamp-glow" cx="120" cy="228" rx="62" ry="10" fill="#ffe299" opacity="0.92" />
           <ellipse class="lamp-glow" cx="120" cy="235" rx="78" ry="18" fill="#ffb347" opacity="0.35" />
         </svg>
@@ -68,7 +68,7 @@
       <span class="hero-award-tag">✦ Premium Lighting Solutions • Kishanganj, Bihar</span>
       <h1 class="hero-title">Unique Light<br />For Your <em>Home</em></h1>
       <p class="hero-desc">Nova Lite Solution brings energy-efficient LED Bulbs, Rechargeable Inverter Bulbs &amp; Tube Lights engineered with surge protection, high brightness, and 1-year replacement warranty.</p>
-      
+
       <div class="hero-actions">
         <a href="products.html" class="btn-pill">Discover Products</a>
         <a href="https://wa.me/919142651626?text=Hello%20Nova%20Lite%20Solution%2C%20I%20want%20to%20know%20more%20about%20your%20products." target="_blank" class="btn-ghost-light">
@@ -77,7 +77,6 @@
         </a>
       </div>
 
-      <!-- METRICS ROW -->
       <div class="hero-metrics">
         <div class="metric-item">
           <h3>9K+</h3>
@@ -95,15 +94,18 @@
     </div>
 
   </div>
-  
-  <div class="hero-diagonal-bg"></div>
-  <div class="hero-home-index">Home 01</div>
+
+  <!-- Scroll indicator -->
+  <a href="#products" class="scroll-indicator" aria-label="Scroll down">
+    <span class="scroll-mouse"><span class="scroll-wheel"></span></span>
+    <span class="scroll-text">Scroll</span>
+  </a>
 </section>
 
-<!-- ===== POPULAR PRODUCTS (4 ARCH CARDS) ===== -->
-<section class="popular-section">
+<!-- ===== POPULAR PRODUCTS ===== -->
+<section class="popular-section" id="products">
   <div class="container">
-    
+
     <div class="section-top-bar">
       <div class="title-group">
         <h2>Popular Products</h2>
@@ -116,8 +118,7 @@
     </div>
 
     <div class="arch-products-grid">
-      
-      <!-- CARD 1: LED BULB 9W -->
+
       <div class="arch-prod-card">
         <div class="card-arch-window">
           <svg viewBox="0 0 160 200" fill="none">
@@ -137,7 +138,6 @@
         </div>
       </div>
 
-      <!-- CARD 2: RECHARGEABLE EMERGENCY BULB -->
       <div class="arch-prod-card">
         <div class="card-arch-window">
           <svg viewBox="0 0 160 200" fill="none">
@@ -158,7 +158,6 @@
         </div>
       </div>
 
-      <!-- CARD 3: TUBE LIGHT 20W -->
       <div class="arch-prod-card">
         <div class="card-arch-window">
           <svg viewBox="0 0 160 200" fill="none">
@@ -178,7 +177,6 @@
         </div>
       </div>
 
-      <!-- CARD 4: ULTRA WIDE HIGH WATTAGE BULB -->
       <div class="arch-prod-card">
         <div class="card-arch-window">
           <svg viewBox="0 0 160 200" fill="none">
@@ -202,10 +200,10 @@
   </div>
 </section>
 
-<!-- ===== WHY CHOOSE US (SPLIT ARCH LAYOUT) ===== -->
+<!-- ===== WHY CHOOSE US ===== -->
 <section class="split-feature-section">
   <div class="container feature-split-grid">
-    
+
     <div class="feature-arch-wrap">
       <div class="feature-arch-card">
         <div class="arch-watermark">LIGHT</div>
@@ -222,7 +220,7 @@
       <span class="hero-award-tag">✦ Precision &amp; Trust</span>
       <h2>Why Choose Us</h2>
       <p>Nova Lite Solution ensures all products deliver high lumen efficiency, long service life, and durable circuit protection tailored for Indian power grids.</p>
-      
+
       <div class="feature-list-clean">
         <div class="feature-row-item">
           <div class="feature-plus"><i class="fas fa-plus"></i></div>
@@ -231,7 +229,7 @@
             <p>Modern thermal heatsinks and lightweight PC diffusers for maximum light spread.</p>
           </div>
         </div>
-        
+
         <div class="feature-row-item">
           <div class="feature-plus"><i class="fas fa-plus"></i></div>
           <div>
@@ -270,7 +268,7 @@
         <p>Advanced electronics built directly into Nova Lite products</p>
       </div>
     </div>
-    
+
     <div class="smart-grid">
       <div class="smart-card">
         <i class="fas fa-bolt"></i>
@@ -309,7 +307,7 @@
           <ellipse cx="80" cy="132" rx="38" ry="6" fill="#ffe299" opacity="0.9" />
         </svg>
       </div>
-      
+
       <div class="get-started-content">
         <h2>Partner with Nova Lite Solution</h2>
         <p>Looking for dealership pricing or bulk wholesale orders for your electrical store? Connect with our Kishanganj office today.</p>

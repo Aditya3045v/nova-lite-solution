@@ -1,4 +1,4 @@
-// ===== NOVA LITE SOLUTION – JS (AUDITED) =====
+// ===== NOVA LITE SOLUTION – JS (HERO v3, AUDITED) =====
 
 document.documentElement.classList.add('js');
 
@@ -56,6 +56,36 @@ if ('IntersectionObserver' in window && revealTargets.length) {
   revealTargets.forEach(el => revealObserver.observe(el));
 } else {
   revealTargets.forEach(el => el.classList.add('reveal'));
+}
+
+// ===== HERO MOUSE PARALLAX (desktop only) =====
+const hero = document.getElementById('hero');
+if (hero && window.matchMedia('(pointer: fine)').matches) {
+  const archCard = hero.querySelector('.arch-card');
+  const heroInfo = hero.querySelector('.hero-info');
+  hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    const x = (e.clientX - rect.left) / rect.width - 0.5;
+    const y = (e.clientY - rect.top) / rect.height - 0.5;
+    if (archCard) {
+      archCard.style.setProperty('--px', `${x * 14}px`);
+      archCard.style.setProperty('--py', `${y * 10}px`);
+    }
+    if (heroInfo) {
+      heroInfo.style.setProperty('--tx', `${x * -8}px`);
+      heroInfo.style.setProperty('--ty', `${y * -6}px`);
+    }
+  });
+  hero.addEventListener('mouseleave', () => {
+    if (archCard) {
+      archCard.style.setProperty('--px', '0px');
+      archCard.style.setProperty('--py', '0px');
+    }
+    if (heroInfo) {
+      heroInfo.style.setProperty('--tx', '0px');
+      heroInfo.style.setProperty('--ty', '0px');
+    }
+  });
 }
 
 // ===== FORM HANDLERS – route to WhatsApp +91 9142651626 =====
