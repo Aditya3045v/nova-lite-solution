@@ -1,4 +1,4 @@
-/* ===== NOVA LITE SOLUTION – LUXURY ARCHITECTURAL DESIGN SYSTEM ===== */
+/* ===== NOVA LITE SOLUTION – REFINED ARCHITECTURAL DESIGN SYSTEM ===== */
 @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 :root {
@@ -61,8 +61,8 @@ h1, h2, h3, .heading-serif {
 
 .brand-logo-text {
   font-family: var(--font-display);
-  letter-spacing: 0.18em;
-  font-size: 1.25rem;
+  letter-spacing: 0.14em;
+  font-size: 1.15rem;
   font-weight: 700;
   text-transform: uppercase;
 }
@@ -140,7 +140,7 @@ h1, h2, h3, .heading-serif {
   left: 0;
   right: 0;
   z-index: 1000;
-  background: rgba(18, 19, 22, 0.85);
+  background: rgba(18, 19, 22, 0.88);
   backdrop-filter: blur(16px);
   border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   transition: var(--transition);
@@ -208,12 +208,12 @@ h1, h2, h3, .heading-serif {
 }
 .header-light .hamburger span { background: var(--text-dark); }
 
-/* HERO SPLIT SECTION (INSPIRED BY REFERENCE DESIGN) */
+/* HERO SPLIT SECTION (EXACT SULIGHT LAYOUT) */
 .hero-split {
   position: relative;
-  min-height: 96vh;
+  min-height: 94vh;
   background-color: var(--bg-dark);
-  padding-top: 100px;
+  padding-top: 90px;
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -223,22 +223,22 @@ h1, h2, h3, .heading-serif {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 160px;
+  height: 140px;
   background: #ffffff;
-  clip-path: polygon(0 75%, 100% 0, 100% 100%, 0 100%);
+  clip-path: polygon(0 80%, 100% 0, 100% 100%, 0 100%);
   z-index: 1;
 }
 .hero-grid {
   display: grid;
-  grid-template-columns: 1fr 1.25fr;
-  gap: 60px;
+  grid-template-columns: 1fr 1.3fr;
+  gap: 50px;
   align-items: center;
   position: relative;
   z-index: 2;
-  padding: 40px 0 80px;
+  padding: 30px 0 70px;
 }
 
-/* ARCH VISUAL */
+/* ARCH SHOWCASE WITH HANGING LAMP */
 .arch-showcase {
   position: relative;
   width: 100%;
@@ -249,9 +249,9 @@ h1, h2, h3, .heading-serif {
   width: 100%;
   height: 520px;
   background: var(--arch-gradient);
-  border-radius: var(--radius-arch);
+  border-radius: 200px 200px 18px 18px;
   position: relative;
-  box-shadow: var(--shadow-arch);
+  box-shadow: 0 30px 70px rgba(217, 120, 88, 0.4);
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -259,14 +259,14 @@ h1, h2, h3, .heading-serif {
 }
 .arch-watermark {
   position: absolute;
-  bottom: 30px;
+  bottom: 25px;
   left: 50%;
   transform: translateX(-50%);
   font-family: var(--font-display);
-  font-size: 5.5rem;
+  font-size: 5rem;
   font-weight: 800;
-  color: rgba(255, 255, 255, 0.16);
-  letter-spacing: 0.15em;
+  color: rgba(255, 255, 255, 0.18);
+  letter-spacing: 0.18em;
   pointer-events: none;
   user-select: none;
 }
@@ -275,10 +275,10 @@ h1, h2, h3, .heading-serif {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  width: 280px;
+  width: 290px;
   height: 380px;
   z-index: 2;
-  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.3));
+  filter: drop-shadow(0 20px 30px rgba(0,0,0,0.35));
 }
 
 /* HERO CONTENT */
@@ -292,14 +292,14 @@ h1, h2, h3, .heading-serif {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  margin-bottom: 16px;
+  margin-bottom: 14px;
   display: inline-block;
 }
 .hero-title {
   font-size: 4rem;
-  line-height: 1.1;
+  line-height: 1.12;
   font-weight: 400;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
   color: #ffffff;
 }
 .hero-title em {
@@ -310,16 +310,16 @@ h1, h2, h3, .heading-serif {
 }
 .hero-desc {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.7);
-  max-width: 480px;
-  margin-bottom: 36px;
+  color: rgba(255, 255, 255, 0.75);
+  max-width: 500px;
+  margin-bottom: 34px;
   line-height: 1.7;
 }
 .hero-actions {
   display: flex;
   align-items: center;
   gap: 24px;
-  margin-bottom: 54px;
+  margin-bottom: 46px;
   flex-wrap: wrap;
 }
 
@@ -328,8 +328,8 @@ h1, h2, h3, .heading-serif {
   display: flex;
   align-items: center;
   gap: 48px;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  padding-top: 32px;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 28px;
 }
 .metric-item h3 {
   font-size: 2.3rem;
@@ -359,7 +359,7 @@ h1, h2, h3, .heading-serif {
 
 /* POPULAR PRODUCTS SECTION */
 .popular-section {
-  padding: 100px 0 70px;
+  padding: 90px 0 70px;
   background: #ffffff;
   position: relative;
 }
@@ -367,7 +367,7 @@ h1, h2, h3, .heading-serif {
   display: flex;
   align-items: flex-end;
   justify-content: space-between;
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 .section-top-bar .title-group h2 {
   font-size: 2.8rem;
@@ -402,7 +402,7 @@ h1, h2, h3, .heading-serif {
   border-color: var(--bg-dark);
 }
 
-/* ARCH PRODUCT CARDS (GRID OF 4 FROM SCREENSHOT) */
+/* ARCH PRODUCT CARDS */
 .arch-products-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -503,7 +503,7 @@ h1, h2, h3, .heading-serif {
 
 /* WHY CHOOSE US & FEATURE SPLIT SECTION */
 .split-feature-section {
-  padding: 100px 0;
+  padding: 90px 0;
   background: var(--bg-light);
 }
 .feature-split-grid {
@@ -613,9 +613,9 @@ h1, h2, h3, .heading-serif {
   color: var(--text-muted-dark);
 }
 
-/* GET STARTED / NEWSLETTER BANNER (INSPIRED BY REFERENCE BOTTOM CARD) */
+/* GET STARTED / NEWSLETTER BANNER */
 .get-started-section {
-  padding: 80px 0 110px;
+  padding: 70px 0 100px;
   background: var(--bg-light);
 }
 .get-started-card {
@@ -691,7 +691,7 @@ h1, h2, h3, .heading-serif {
 }
 .footer-brand h3 {
   font-family: var(--font-display);
-  font-size: 1.4rem;
+  font-size: 1.35rem;
   color: #fff;
   letter-spacing: 0.12em;
   margin-bottom: 16px;
@@ -792,7 +792,7 @@ h1, h2, h3, .heading-serif {
 .inner-hero {
   background: var(--bg-dark);
   color: #fff;
-  padding: 140px 0 70px;
+  padding: 130px 0 60px;
   text-align: center;
   position: relative;
   overflow: hidden;
