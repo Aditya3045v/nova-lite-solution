@@ -1,91 +1,94 @@
-// ===== NOVA LITE SOLUTION – JS INTERACTIVITY =====
+// ===== NOVA LITE SOLUTION – JS (AUDITED) =====
 
-// Navbar background change on scroll
+document.documentElement.classList.add('js');
+
+// Header background on scroll
 window.addEventListener('scroll', () => {
   const header = document.getElementById('header');
   if (header) {
-    if (window.scrollY > 40) {
-      header.style.background = 'rgba(18, 19, 22, 0.96)';
-    } else {
-      header.style.background = 'rgba(18, 19, 22, 0.85)';
-    }
+    header.style.background = window.scrollY > 40
+      ? 'rgba(13, 14, 18, 0.96)'
+      : 'rgba(13, 14, 18, 0.88)';
   }
-});
+}, { passive: true });
 
-// Hamburger mobile menu toggle
+// Mobile hamburger menu
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 if (hamburger && navMenu) {
   hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('open');
   });
+  navMenu.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navMenu.classList.remove('open'));
+  });
 }
 
 // Product filter pills
 const filterPills = document.querySelectorAll('.filter-pill');
-const productCards = document.querySelectorAll('.arch-prod-card[data-category]');
-
-if (filterPills.length && productCards.length) {
+const filterableCards = document.querySelectorAll('.arch-prod-card[data-category]');
+if (filterPills.length && filterableCards.length) {
   filterPills.forEach(pill => {
     pill.addEventListener('click', () => {
       filterPills.forEach(p => p.classList.remove('active'));
       pill.classList.add('active');
       const filter = pill.dataset.filter;
-
-      productCards.forEach(card => {
-        const cat = card.dataset.category;
-        if (filter === 'all' || cat === filter) {
-          card.style.display = '';
-        } else {
-          card.style.display = 'none';
-        }
+      filterableCards.forEach(card => {
+        const show = filter === 'all' || card.dataset.category === filter;
+        card.style.display = show ? '' : 'none';
+        if (show) card.classList.add('reveal');
       });
     });
   });
 }
 
-// Form Handlers routing to WhatsApp (+91 9142651626)
+// Scroll-reveal via IntersectionObserver (graceful fallback = always visible)
+const revealTargets = document.querySelectorAll('.arch-prod-card, .smart-card, .form-shell, .get-started-card');
+if ('IntersectionObserver' in window && revealTargets.length) {
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('reveal');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
+  revealTargets.forEach(el => revealObserver.observe(el));
+} else {
+  revealTargets.forEach(el => el.classList.add('reveal'));
+}
+
+// ===== FORM HANDLERS – route to WhatsApp +91 9142651626 =====
+const WA_NUMBER = '919142651626';
+
 function handleQuickEnquiry(e) {
   e.preventDefault();
   const phone = document.getElementById('quickPhone').value;
   const text = `Hello Nova Lite Solution! I want to get started. My phone number is ${phone}.`;
-  window.open(`https://wa.me/919142651626?text=${encodeURIComponent(text)}`, '_blank');
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
+  e.target.reset();
 }
 
 function handleGeneralEnquiry(e) {
   e.preventDefault();
   const form = e.target;
-  const name = form.name.value;
-  const phone = form.phone.value;
-  const product = form.product.value;
-  const msg = form.message.value;
-  const text = `Hello Nova Lite Solution!\nName: ${name}\nPhone: ${phone}\nProduct: ${product}\nMessage: ${msg}`;
-  window.open(`https://wa.me/919142651626?text=${encodeURIComponent(text)}`, '_blank');
+  const text = `Hello Nova Lite Solution!\nName: ${form.name.value}\nPhone: ${form.phone.value}\nProduct: ${form.product.value}\nMessage: ${form.message.value}`;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
   form.reset();
 }
 
 function handleDealerSubmit(e) {
   e.preventDefault();
   const form = e.target;
-  const name = form.name.value;
-  const business = form.business.value;
-  const phone = form.phone.value;
-  const city = form.city.value;
-  const type = form.type.value;
-  const volume = form.volume.value;
-  const text = `Hello Nova Lite Solution!\n*Dealer Registration Request*\nName: ${name}\nBusiness: ${business}\nPhone: ${phone}\nCity: ${city}\nType: ${type}\nVolume: ${volume}`;
-  window.open(`https://wa.me/919142651626?text=${encodeURIComponent(text)}`, '_blank');
+  const text = `Hello Nova Lite Solution!\n*Dealer Registration Request*\nName: ${form.name.value}\nBusiness: ${form.business.value}\nPhone: ${form.phone.value}\nCity: ${form.city.value}\nType: ${form.type.value}\nProducts: ${form.volume.value}`;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
   form.reset();
 }
 
 function handleContactSubmit(e) {
   e.preventDefault();
   const form = e.target;
-  const name = form.name.value;
-  const phone = form.phone.value;
-  const subject = form.subject.value;
-  const msg = form.message.value;
-  const text = `Hello Nova Lite Solution!\n*Contact Message*\nName: ${name}\nPhone: ${phone}\nSubject: ${subject}\nMessage: ${msg}`;
-  window.open(`https://wa.me/919142651626?text=${encodeURIComponent(text)}`, '_blank');
+  const text = `Hello Nova Lite Solution!\n*Contact Enquiry*\nName: ${form.name.value}\nPhone: ${form.phone.value}\nSubject: ${form.subject.value}\nMessage: ${form.message.value}`;
+  window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
   form.reset();
 }
