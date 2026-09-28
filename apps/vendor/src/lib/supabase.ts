@@ -23,3 +23,16 @@ export async function clearApiCache() {
     await caches.delete('novalite-api').catch(() => undefined);
   }
 }
+
+/** Like unwrap, for list queries: never returns null. */
+export function unwrapRows<T>(res: { data: T[] | null; error: unknown }): T[] {
+  if (res.error) throw res.error;
+  return res.data ?? [];
+}
+
+/** Like unwrap, for calls that must return a value. */
+export function unwrapOne<T>(res: { data: T | null; error: unknown }, message = 'No data returned'): T {
+  if (res.error) throw res.error;
+  if (res.data == null) throw new Error(message);
+  return res.data;
+}

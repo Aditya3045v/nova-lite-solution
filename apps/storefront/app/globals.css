@@ -1,0 +1,66 @@
+@import "tailwindcss";
+@import "../../../packages/ui/src/theme.css";
+
+@theme {
+  --font-sans: var(--font-inter), "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-jakarta), "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white;
+  }
+  html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 8rem;
+  }
+}
+
+@utility container-x {
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: 1rem;
+  @media (width >= 40rem) {
+    padding-inline: 1.5rem;
+  }
+  @media (width >= 64rem) {
+    padding-inline: 2rem;
+  }
+}
+
+@utility hero-glow {
+  background:
+    radial-gradient(60% 80% at 85% 55%, rgb(56 132 255 / 0.45), transparent 60%),
+    radial-gradient(40% 60% at 70% 20%, rgb(242 107 29 / 0.25), transparent 60%),
+    linear-gradient(135deg, #070b17 0%, #0b1330 55%, #0d1a3f 100%);
+}
+
+@utility promo-glow {
+  background:
+    radial-gradient(70% 60% at 50% 75%, rgb(255 180 90 / 0.55), transparent 65%),
+    linear-gradient(160deg, #7a1d0a 0%, #b1330c 45%, #d9480f 100%);
+}
+
+@utility text-balance {
+  text-wrap: balance;
+}
+
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@utility animate-float {
+  animation: float-y 6s ease-in-out infinite;
+}
+
+@keyframes streak {
+  0% { transform: translateX(-30%) rotate(-12deg); opacity: 0; }
+  30% { opacity: 1; }
+  100% { transform: translateX(30%) rotate(-12deg); opacity: 0; }
+}
+
+@utility animate-streak {
+  animation: streak 7s ease-in-out infinite;
+}
