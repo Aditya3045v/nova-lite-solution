@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img">
+<defs>
+  <radialGradient id="glass" cx="42%" cy="34%" r="70%">
+    <stop offset="0" stop-color="#FFFFFF"/>
+    <stop offset=".55" stop-color="#F3F5F9"/>
+    <stop offset=".85" stop-color="#E1E6EE"/>
+    <stop offset="1" stop-color="#CBD2DD"/>
+  </radialGradient>
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+    <stop offset=".6" stop-color="#FFF4E6" stop-opacity=".35"/>
+    <stop offset="1" stop-color="#FFE3C2" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="neck" x1="0" x2="1">
+    <stop offset="0" stop-color="#D9DDE4"/>
+    <stop offset=".35" stop-color="#FFFFFF"/>
+    <stop offset=".7" stop-color="#EEF0F4"/>
+    <stop offset="1" stop-color="#C3C9D2"/>
+  </linearGradient>
+  <linearGradient id="metal" x1="0" x2="1">
+    <stop offset="0" stop-color="#8E959F"/>
+    <stop offset=".3" stop-color="#E9ECF0"/>
+    <stop offset=".55" stop-color="#FFFFFF"/>
+    <stop offset=".8" stop-color="#B8BEC7"/>
+    <stop offset="1" stop-color="#7C838D"/>
+  </linearGradient>
+  <linearGradient id="alu" x1="0" x2="1">
+    <stop offset="0" stop-color="#6B7280"/>
+    <stop offset=".25" stop-color="#C9CED6"/>
+    <stop offset=".5" stop-color="#EEF1F5"/>
+    <stop offset=".75" stop-color="#B3B9C2"/>
+    <stop offset="1" stop-color="#5E6570"/>
+  </linearGradient>
+  <linearGradient id="tube" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF"/>
+    <stop offset=".45" stop-color="#F7F9FC"/>
+    <stop offset="1" stop-color="#D5DBE4"/>
+  </linearGradient>
+  <linearGradient id="brand" x1="0" x2="1">
+    <stop offset="0" stop-color="#C94E0B"/>
+    <stop offset=".5" stop-color="#F26B1D"/>
+    <stop offset="1" stop-color="#C94E0B"/>
+  </linearGradient>
+  <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+  <filter id="blur40" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+  
+</defs>
+<ellipse cx="400" cy="735" rx="170" ry="18" fill="#0B1020" opacity="0.16" filter="url(#soft)"/>
+
+  <g transform="translate(400 700) scale(1) translate(-400 -700)">
+    <circle cx="400" cy="270" r="280" fill="url(#glow)"/>
+    <rect x="250" y="90" width="300" height="300" rx="120" fill="url(#glass)" stroke="#D3D9E2" stroke-width="2"/>
+    <ellipse cx="320" cy="180" rx="34" ry="70" transform="rotate(12 320 180)" fill="#FFFFFF" opacity=".8"/>
+    <rect x="240" y="370" width="320" height="16" rx="6" fill="url(#brand)"/>
+    <path d="M244 386 L556 386 L520 560 L280 560 Z" fill="url(#alu)"/>
+    <path d="M262 392 L286 554" stroke="#4B5563" stroke-width="5" opacity=".45"/><path d="M289.5 392 L309 554" stroke="#4B5563" stroke-width="5" opacity=".45"/><path d="M317 392 L332 554" stroke="#4B5563" stroke-width="5" opacity=".45"/><path d="M344.5 392 L355 554" stroke="#4B5563" stroke-width="5" opacity=".45"/><path d="M372 392 L378 554" stroke="#4B5563" stroke-width="5" opacity=".45"/><path d="M399.5 392 L401 554" stroke="#4B5563" stroke-width="5" opacity=".45"/><path d="M427 392 L424 554" stroke="#4B5563" stroke-width="5" opacity=".45"/><path d="M454.5 392 L447 554" stroke="#4B5563" stroke-width="5" opacity=".45"/><path d="M482 392 L470 554" stroke="#4B5563" stroke-width="5" opacity=".45"/><path d="M509.5 392 L493 554" stroke="#4B5563" stroke-width="5" opacity=".45"/><path d="M537 392 L516 554" stroke="#4B5563" stroke-width="5" opacity=".45"/>
+    <rect x="330" y="440" width="140" height="44" rx="10" fill="#111827" opacity=".82"/>
+    <text x="400" y="472" text-anchor="middle" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="28" font-weight="800" fill="#FFFFFF">50W</text>
+    <path d="M322 560 L478 560 L470 626 L330 626 Z" fill="url(#metal)"/>
+    <line x1="326" y1="576" x2="474" y2="576" stroke="#8E959F" stroke-width="2" opacity=".6"/><line x1="326" y1="592" x2="474" y2="592" stroke="#8E959F" stroke-width="2" opacity=".6"/><line x1="326" y1="608" x2="474" y2="608" stroke="#8E959F" stroke-width="2" opacity=".6"/>
+    <path d="M334 626 L466 626 L440 658 L360 658 Z" fill="#1F2430"/>
+    <circle cx="400" cy="652" r="10" fill="url(#metal)"/>
+  </g>
+</svg>

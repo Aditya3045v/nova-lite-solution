@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800" role="img">
+<defs>
+  <radialGradient id="glass" cx="42%" cy="34%" r="70%">
+    <stop offset="0" stop-color="#FFFFFF"/>
+    <stop offset=".55" stop-color="#F3F5F9"/>
+    <stop offset=".85" stop-color="#E1E6EE"/>
+    <stop offset="1" stop-color="#CBD2DD"/>
+  </radialGradient>
+  <radialGradient id="glow" cx="50%" cy="50%" r="50%">
+    <stop offset="0" stop-color="#FFFFFF" stop-opacity=".95"/>
+    <stop offset=".6" stop-color="#FFF4E6" stop-opacity=".35"/>
+    <stop offset="1" stop-color="#FFE3C2" stop-opacity="0"/>
+  </radialGradient>
+  <linearGradient id="neck" x1="0" x2="1">
+    <stop offset="0" stop-color="#D9DDE4"/>
+    <stop offset=".35" stop-color="#FFFFFF"/>
+    <stop offset=".7" stop-color="#EEF0F4"/>
+    <stop offset="1" stop-color="#C3C9D2"/>
+  </linearGradient>
+  <linearGradient id="metal" x1="0" x2="1">
+    <stop offset="0" stop-color="#8E959F"/>
+    <stop offset=".3" stop-color="#E9ECF0"/>
+    <stop offset=".55" stop-color="#FFFFFF"/>
+    <stop offset=".8" stop-color="#B8BEC7"/>
+    <stop offset="1" stop-color="#7C838D"/>
+  </linearGradient>
+  <linearGradient id="alu" x1="0" x2="1">
+    <stop offset="0" stop-color="#6B7280"/>
+    <stop offset=".25" stop-color="#C9CED6"/>
+    <stop offset=".5" stop-color="#EEF1F5"/>
+    <stop offset=".75" stop-color="#B3B9C2"/>
+    <stop offset="1" stop-color="#5E6570"/>
+  </linearGradient>
+  <linearGradient id="tube" x1="0" y1="0" x2="0" y2="1">
+    <stop offset="0" stop-color="#FFFFFF"/>
+    <stop offset=".45" stop-color="#F7F9FC"/>
+    <stop offset="1" stop-color="#D5DBE4"/>
+  </linearGradient>
+  <linearGradient id="brand" x1="0" x2="1">
+    <stop offset="0" stop-color="#C94E0B"/>
+    <stop offset=".5" stop-color="#F26B1D"/>
+    <stop offset="1" stop-color="#C94E0B"/>
+  </linearGradient>
+  <filter id="soft" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="14"/></filter>
+  <filter id="blur40" x="-50%" y="-50%" width="200%" height="200%"><feGaussianBlur stdDeviation="40"/></filter>
+  
+</defs>
+
+  <ellipse cx="410" cy="720" rx="250" ry="22" fill="#0B1020" opacity="0.18" filter="url(#soft)"/>
+  <path d="M170 250 L470 200 L470 700 L170 720 Z" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <path d="M470 200 L640 250 L640 690 L470 700 Z" fill="#EEF0F4" stroke="#E5E7EB" stroke-width="2"/>
+  <path d="M170 250 L470 200 L640 250 L340 292 Z" fill="#F7F8FA" stroke="#E5E7EB" stroke-width="2"/>
+  <path d="M170 520 L470 490 L470 700 L170 720 Z" fill="#F26B1D"/>
+  <path d="M470 490 L640 520 L640 690 L470 700 Z" fill="#C94E0B"/>
+  <g transform="translate(0 0) skewY(-9.5) translate(0 50)">
+    <text x="196" y="320" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="34" font-weight="800" fill="#0B1020" letter-spacing="2">NOVA</text>
+    <text x="196" y="346" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="14" font-weight="700" fill="#F26B1D" letter-spacing="4">LITE SOLUTION</text>
+    <text x="196" y="420" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="64" font-weight="800" fill="#0B1020">15W</text>
+    <text x="196" y="455" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="600" fill="#4B5563">1500 lm · Cool White</text>
+    <text x="196" y="560" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="20" font-weight="700" fill="#FFFFFF">LED Bulb</text>
+    <text x="196" y="590" font-family="Inter,Segoe UI,Arial,sans-serif" font-size="15" font-weight="600" fill="#FFE8D6">1 year replacement warranty</text>
+  </g>
+  <circle cx="555" cy="345" r="54" fill="#FFFFFF" stroke="#E5E7EB" stroke-width="2"/>
+  <path d="M555 312 a26 26 0 0 1 16 46 v10 h-32 v-10 a26 26 0 0 1 16 -46 z" fill="none" stroke="#F26B1D" stroke-width="5"/>
+  <rect x="541" y="372" width="28" height="6" rx="3" fill="#F26B1D"/>
+  
+</svg>

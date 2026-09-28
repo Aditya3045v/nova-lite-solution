@@ -1,0 +1,6 @@
+{
+  "name": "@novalite/assets",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Brand, icon and seed media shared by every app. Vite apps use public/ as publicDir; the storefront copies media at build time."
+}
